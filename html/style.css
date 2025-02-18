@@ -1,0 +1,136 @@
+body{
+    font-family: Arial, sans-serif;
+    background: color #75e504;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: 90;
+    max-width: 1200px;
+    margin: 20px auto;
+
+
+}
+header{ 
+    background-image: url(./style/imboa.jpg);
+    background-size: cover;
+    background-position:center ;
+    image-rendering: auto;
+    color: #010702;
+    text-align: center;
+    padding: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    object-fit: cover;
+    font-weight: bolder;
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px rgba(3, 3, 3, 0.3);
+   
+    
+      
+}
+.pesquisa{
+    text-align:right;
+    margin: 10px 0;
+}
+
+.pesquisa input{ 
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    font-size: 15px;
+    border: 3px solid #333 ;
+    border-radius: 50px;
+
+
+
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    justify-content:center;
+    padding:20px;
+    width: 100%;
+
+}
+.card{
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(61, 9, 234, 0.5);
+    padding:7px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    
+}
+.card:hover{
+    transform: scale(1.25);
+
+} 
+
+.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 2px;
+
+}
+.card h3{
+    margin: 10px 0 5px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.card p{
+    font-weight: bold ;
+    font-size: 15px;
+    color: #0a0e05;
+}
+.teste1{
+    box-shadow: 0 0 10px rgba(89, 0, 255, 0.5);
+    padding:0 ;
+    text-align:center;
+    
+}
+
+footer{
+    background-color: #0b399d;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 3%;
+    font-size:17px;
+    font-weight: bold;
+    width: 98%;
+    gap: 40px;
+    background-image: url(./style/footer.jpg);
+   
+}
+@media(max-width:1024px){
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:720px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    header{
+        font-size: 15px;
+    }
+    .pesquisa input{
+        max-width:  100px;
+
+    }
+    .cards{
+        padding: 10px;
+    }
+}
