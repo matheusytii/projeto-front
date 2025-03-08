@@ -1,3 +1,29 @@
+.telainicial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+    font-size:65px;
+    text-align: center;
+    position: relative;
+    
+}
+
+.carro {
+    width: 150px;
+    height: 80px;
+    background: url(./style/tela.jpg) no-repeat center center / contain;
+    position:fixed;
+    bottom: 50px;
+    left: -200px;
+    animation: moverCarro 5s linear forwards;
+}
+
+
+
 body{
     font-family: Arial, sans-serif;
     background: color #75e504;
@@ -43,7 +69,7 @@ header{
 
 .pesquisa input{ 
     width: 100%;
-    max-width: 100px;
+    max-width: 300px;
     padding: 10px;
     font-size: 15px;
     border: 3px solid #333 ;
@@ -133,4 +159,14 @@ footer{
     .cards{
         padding: 10px;
     }
+}   
+@keyframes moverCarro {  
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100vw;
+    }
 }
+
+
