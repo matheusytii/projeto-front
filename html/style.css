@@ -9,6 +9,7 @@
     font-size:65px;
     text-align: center;
     position: relative;
+    transition: opacity 0.5s;
     
 }
 
@@ -33,6 +34,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 .container{
     width: 90;
@@ -97,7 +99,7 @@ header{
     
 }
 .card:hover{
-    transform: scale(1.25);
+    transform: scale(1.1);
 
 } 
 
@@ -140,12 +142,14 @@ footer{
     background-image: url(./style/footer.jpg);
    
 }
-@media(max-width:1024px){
+/* descktop*/
+@media(max-width:1200px){
     .cards{
         grid-template-columns: repeat(2,1fr);
     }
 }
-@media(max-width:720px){
+/* mobile*/
+@media(max-width:767px){
     .cards{
         grid-template-columns: 1fr;
     }

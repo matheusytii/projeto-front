@@ -1,16 +1,15 @@
 const CACHE_NAME = "ramos-multimarcas-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/icons/icon-192x192.png",
-  "/icons/icon-512x512.png",
-  "/style/fiat uno.jpg",
-  "/style/ram 2550.jpg",
-  "/style/silverado.jpg",
-  "/style/fusca.jpg",
-  "/style/opala.jpg",
-  "/style/kadett tunado.jpg"
+  "../html/index.html",
+  "../style/style.css",
+  "../icons/icon-192x192.png",
+  "../icons/icon-512x512.png",
+  "../style/fiat-uno.jpg",
+  "../style/ram-2550.jpg",
+  "../style/silverado.jpg",
+  "../style/fusca.jpg",
+  "../style/opala.jpg",
+  "../style/kadett-tunado.jpg"
 ];
 
 // Instalando o Service Worker e armazenando em cache os arquivos essenciais
@@ -41,7 +40,15 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+      return response || fetch(event.request).catch(() => {
+        return caches.match("../html/index.html"); // Retorna a página principal se offline
+      });
     })
   );
 });
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("../serviceworker.js")
+    .then(() => console.log("Service Worker registrado com sucesso!"))
+    .catch((error) => console.log("Erro ao registrar o Service Worker:", error));
+}
