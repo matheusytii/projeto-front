@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg,#fffdfd, #8f8d8d);
+
+}
+
+.container{
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+text-align: center;
+width: 350px;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.grupo{
+     margin-bottom: 10px;
+     display: flex;
+     flex-direction: column;
+}
+
+input{
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+button{
+    width: 100%;
+    padding:  9px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+button:hover{
+background: rgb(71, 71, 71);
+}
